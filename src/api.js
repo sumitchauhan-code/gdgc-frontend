@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8080';
+const BASE = import.meta.env.VITE_API_BASE;
 export async function fetchMembers() {
   const res = await fetch(`${BASE}/members`);
   if (!res.ok) throw new Error('Failed to fetch members');
